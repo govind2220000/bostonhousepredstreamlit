@@ -57,7 +57,7 @@ def show_predict_page():
         df[col_lst] = standard_scaler.transform(df[col_lst])
         
         # Load the model for prediction
-        final_model = pickle.load(open('src/Models/XGBRegressor.pkl', 'rb'))
+        final_model = pickle.load(open('src/Models/DecisionTreeRegressor.pkl', 'rb'))
         
         
         st.subheader(f'The Predicted Value is: {final_model.predict(df.values)[0]:.2f}')
